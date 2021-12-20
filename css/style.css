@@ -71,22 +71,6 @@ footer a{
   margin-right: 8%;
 }
 
-
-/*====================madia queries=================*/
-
-
-@media only screen and (min-width: 1024px) {
-
-  #myPic,
-  .calendar {
-    display: block;
-  }
-  .text {
-    width: 35%;
-  }
-}
-
-
 /*===============Navigation=======================================*/
 
 .navbar {
@@ -328,6 +312,18 @@ p {
   to {opacity: 1}
 }
 
+/*====================madia queries=================*/
+
+@media only screen and (min-width: 1024px) {
+
+  #myPic,
+  .calendar {
+    display: block;
+  }
+  .text {
+    width: 35%;
+  }
+}
 
 
 
