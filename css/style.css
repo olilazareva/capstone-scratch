@@ -1,0 +1,425 @@
+/*default*/
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+img {
+  vertical-align: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+/* basic info========================================== */
+html,
+body {
+  line-height: 1.4;
+  font-size: 24px;
+  color: #565349;
+  font-family: Lato, sans-serif;
+  font-weight: 300;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+
+/*body {
+	min-height: 100vh;
+
+}*/
+
+
+main {
+  /*min-height: 100vh;*/
+  padding-left: 10%;
+  padding-right: 10%;
+  clear: both;
+  flex: 1;
+}
+
+
+
+
+footer {
+	background-color: #5e38ba;
+	text-align: center;
+  font-weight: 500;
+  color: #fff;
+	}
+
+footer a{
+  font-size: 14px;
+  margin-right: 8%;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 90px;
+}
+
+
+h2 {
+    font-weight: 400;
+    font-size: 32px;
+    position: relative;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-weight: 300;
+    font-size: 26px;
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+p {
+  font-weight: 300;
+}
+
+
+/*===============Navigation=======================================*/
+
+.navbar {
+    padding: 10px 0;
+
+}
+.nav-item{
+	display: inline;
+  margin-left: 2rem;
+  font-size: 80%;
+  text-align: right;
+  
+}
+
+.top{
+  display: block;
+  font-weight: 400;
+
+}
+
+a {
+  color: inherit;
+  margin-right: 4%;
+}
+
+.top-top:hover {
+  background-color: #5e38ba;
+  color: #fff;
+}
+
+.current{
+  font-weight: 700;
+  color: #5e38ba;
+}
+
+.navbar-nav {
+  text-align: center;
+}
+
+.navbar-brand {
+	font-size: .7em;
+	font-weight: 400;
+  margin: 10px;
+  font-weight: 900;
+  color: #5e38ba;
+}
+
+
+/*===============extras=======================================*/
+
+.intro {
+  margin-top: 20px;
+}
+
+
+#myPic {
+  /*display: none;*/
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+.text,
+.radio {
+  width: 100%;
+}
+
+.radio {
+  margin-top: 40px;
+  float: right;
+}
+
+
+/*===================Button=============*/
+.read-more {
+    font-weight: 400;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background: #5e38ba;
+    padding: 1%;
+    font-size: .8em;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+
+}
+
+
+.read-more:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+
+.read-more:hover:after {
+    background: transparent;
+}
+
+.read-more:hover:before {
+    opacity: 1;
+
+}
+
+.read-more:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #5e38ba;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.space {
+    padding-top: 204px;
+}
+
+.container-fluid {
+  min-height: 100vw;
+  margin: 0 auto -50px;
+}
+
+.learn-more{
+	font-size: 16px;
+}
+
+.image-item img{
+  width: 80%;
+  height: auto;
+}
+
+.slideshow-container {
+  text-align: center;
+}
+
+
+.image-item {
+  text-align: center;
+}
+
+.container-fluid {
+	margin: auto;
+	
+}
+
+ .image-wrap {
+    padding-top: 30px;
+    position: relative;
+    text-align: center;
+    padding: 0;
+}
+
+.image-wrap img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*========CG CAROUSEL=========================*/
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.image-item {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: 22px;
+  padding: 16px;
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0px;
+  border-radius: 0 7px 7px 0;
+ }
+
+.prev {
+  left: 0px;
+  border-radius: 7px 0 0 7px;
+}
+ 
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover, .caption-fade:hover {
+  background-color: rgba(0,0,0,0.4);
+}
+
+.caption-fade {
+  padding: 2%;
+  border-radius: 10px;
+
+}
+
+/* Caption text */
+.caption {
+  color: #f2f2f2;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  margin-bottom: 3%;
+  text-align: center;
+  
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+/*====================media queries=================*/
+
+
+@media only screen and (min-width: 1024px) {
+
+  .top{
+  display: inline;
+  text-align: center;
+}
+
+  #myPic,
+  .radio {
+    display: block;
+  }
+
+  .text {
+    width: 45%;
+    float: left;
+  }
+
+  .prev, .next {
+    display: block;
+  }
+  
+  .radio {
+  width: 35%;
+  height: auto;
+  margin-top: 80px;
+
+}
+}
+
